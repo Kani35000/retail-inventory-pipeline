@@ -62,6 +62,46 @@ distribution) operates:
 
 ## Status
 🔨 In Progress — Database layer complete, KPI queries in development
+## 📊 Key Findings So Far
+
+### 💰 Revenue & Profitability
+| Warehouse                      | Revenue  | COGS    | Gross Margin % |
+|--------------------------------|----------|---------|----------------|
+| Atlanta Distribution Center    | $28.7M   | $9.3M   | 67.6%          |
+| Los Angeles Distribution Center| $28.7M   | $9.3M   | 67.5%          |
+| Dallas Distribution Center     | $28.7M   | $9.3M   | 67.6%          |
+| New Jersey Distribution Center | $28.6M   | $9.3M   | 67.6%          |
+| Chicago Distribution Center    | $28.6M   | $9.2M   | 67.6%          |
+
+### 🔍 Shrinkage Analysis
+| Warehouse                      | Shrinkage % | Dollar Loss |
+|--------------------------------|-------------|-------------|
+| Chicago Distribution Center    | 9.01%       | $8.9M       |
+| Dallas Distribution Center     | 8.97%       | $8.7M       |
+| Atlanta Distribution Center    | 2.53%       | $2.5M       |
+| New Jersey Distribution Center | 2.52%       | $2.5M       |
+| Los Angeles Distribution Center| 2.51%       | $2.5M       |
+
+### 🚨 Executive Insights
+| Metric                              | Value   |
+|-------------------------------------|---------|
+| Total Company Revenue               | $143.2M |
+| Total Shrinkage Loss                | $25.1M  |
+| Chicago + Dallas Combined Loss      | $17.6M  |
+| % of Total Shrinkage from 2 Centers | 72%     |
+
+### 📌 KPI Progress
+| KPI | Description | Status |
+|-----|-------------|--------|
+| KPI 1 | Total Revenue per Warehouse | ✅ Complete |
+| KPI 2 | Total COGS per Warehouse | ✅ Complete |
+| KPI 3 | Gross Margin per Warehouse | ✅ Complete |
+| KPI 4 | Shrinkage % per Warehouse | ✅ Complete |
+| KPI 5 | Shrinkage Financial Loss | ✅ Complete |
+| KPI 6 | Stockout Revenue Loss | 🔨 In Progress |
+| KPI 7 | Inventory Turnover Ratio | 🔨 In Progress |
+| KPI 8 | Days Inventory on Hand | 🔨 In Progress |
+| KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
 
 ## Author
 **kani okorji**  
