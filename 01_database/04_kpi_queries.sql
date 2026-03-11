@@ -90,3 +90,28 @@ FROM retail.cycle_counts c
 LEFT JOIN retail.warehouses w ON w.warehouse_id = c.warehouse_id
 GROUP BY w.warehouse_id, w.warehouse_name
 ORDER BY perc_shrinkage DESC;
+
+-- ============================================
+-- KPI 5: SHRINKAGE FINANCIAL LOSS PER WAREHOUSE
+-- ============================================
+WITH cycle_product AS (
+    SELECT 
+        c.product_id, 
+        p.unit_cost, 
+        c.warehouse_id
+    FROM retail.cycle_counts c
+    JOIN retail.products p ON c.product_id = p.product_id
+)
+SELECT 
+    w.warehouse_id, 
+    w.warehouse_name, 
+    ROUND(COALESCE((
+        SUM(c.system_inventory * cp.unit_cost) - 
+        SUM(c.physical_count * cp.unit_cost)
+    ), 0), 2) AS dollar_shrinkage
+FROM retail.cycle_counts c
+LEFT JOIN retail.warehouses w ON w.warehouse_id = c.warehouse_id
+JOIN cycle_product cp ON c.product_id = cp.product_id
+GROUP BY w.warehouse_id, w.warehouse_name
+ORDER BY dollar_shrinkage DESC;
+
