@@ -76,3 +76,17 @@ SELECT
 FROM revenue r
 JOIN total_cogs tc ON r.warehouse_name = tc.warehouse_name
 ORDER BY gross_margin_pct DESC;
+
+-- ============================================
+-- KPI 4: SHRINKAGE % PER WAREHOUSE
+-- ============================================
+SELECT 
+    w.warehouse_id, 
+    w.warehouse_name, 
+    ROUND(COALESCE((
+        (SUM(c.system_inventory) - SUM(c.physical_count))::numeric
+        / SUM(c.system_inventory)) * 100, 0), 2) AS perc_shrinkage
+FROM retail.cycle_counts c
+LEFT JOIN retail.warehouses w ON w.warehouse_id = c.warehouse_id
+GROUP BY w.warehouse_id, w.warehouse_name
+ORDER BY perc_shrinkage DESC;
