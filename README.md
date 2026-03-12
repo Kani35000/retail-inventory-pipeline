@@ -14,6 +14,35 @@ This pipeline answers five critical business questions:
 4. Which warehouses are underperforming?
 5. What is the projected ROI if inventory accuracy improves by 5%?
 
+## What This Project Solves
+This pipeline answers five critical business questions:
+1. How much money are we losing due to shrinkage?
+2. How much revenue are we losing due to stockouts?
+3. Which SKUs are tying up too much capital?
+4. Which warehouses are underperforming?
+5. What is the projected ROI if inventory accuracy improves by 5%?
+
+
+## 🤖 Pipeline Automation
+This project includes a Python automation layer that runs nightly to:
+
+| Automation Feature | Tool | Status |
+|---|---|---|
+| Extract data from PostgreSQL | Python + SQLAlchemy | 🔨 In Progress |
+| Calculate running inventory per SKU | Python + Pandas | 🔨 In Progress |
+| Detect stockout events automatically | Python + Pandas | 🔨 Planned |
+| Flag low stock alerts by warehouse | Python + Pandas | 🔨 Planned |
+| Refresh Power BI dashboard data | Python + Power BI API | 🔨 Planned |
+| Generate nightly stockout report | Python + Email | 🔨 Planned |
+
+### Why Automation Matters
+| Without Automation | With Automation |
+|---|---|
+| Analyst runs reports manually | System runs every night |
+| Stockouts discovered weekly | Stockouts flagged next morning |
+| Revenue already lost | Reorder triggered immediately |
+| Reactive decision making | Proactive inventory management |
+
 ## Project Architecture
 ```
 retail-inventory-pipeline/
@@ -64,6 +93,14 @@ distribution) operates:
 🔨 In Progress — Database layer complete, KPI queries in development
 ## 📊 Key Findings So Far
 
+### 🤖 Planned Automation
+| Feature | Tool | Status |
+|---|---|---|
+| Nightly running inventory calculation | Python + PostgreSQL | 🔨 In Progress |
+| Automatic stockout detection | Python pandas | 🔨 Planned |
+| Low stock alert system | Python + email | 🔨 Planned |
+| Daily Power BI refresh | Python + Power BI API | 🔨 Planned |
+
 ### 💰 Revenue & Profitability
 | Warehouse                      | Revenue  | COGS    | Gross Margin % |
 |--------------------------------|----------|---------|----------------|
@@ -102,6 +139,37 @@ distribution) operates:
 | KPI 7 | Inventory Turnover Ratio | 🔨 In Progress |
 | KPI 8 | Days Inventory on Hand | 🔨 In Progress |
 | KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
+
+
+## 🔬 Limitations & Further Investigation
+
+### Current Model Limitations
+Stockout detection identifies days where cumulative 
+running inventory falls below zero per product per 
+warehouse. Calculated as:
+
+`Running Inventory = SUM(units_received + units_returned - units_sold - units_damaged)`
+
+This captures demand-spike and damage driven stockouts 
+but does not account for:
+
+| Limitation | Missing Data | Future Enhancement |
+|---|---|---|
+| Supply chain delays | No delivery date column | Add supplier lead time table |
+| Poor forecasting | No forecast column | Add demand forecast table |
+| Allocation errors | No transfer column | Add warehouse transfer table |
+| Receiving errors | No receiving accuracy column | Add receiving audit table |
+| Minimum order issues | No vendor column | Add vendor agreement table |
+
+### Recommended Next Steps
+| Priority | Enhancement | Business Impact |
+|---|---|---|
+| High | Add supplier lead time data | Identify delay-driven stockouts |
+| High | Add demand forecasting | Improve inventory planning |
+| Medium | Add vendor agreement table | Calculate true net shrinkage loss |
+| Medium | Add warehouse transfer data | Identify allocation inefficiencies |
+| Low | Add customer demand data | Calculate true lost revenue |
+
 
 ## Author
 **kani okorji**  
