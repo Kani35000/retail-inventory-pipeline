@@ -14,14 +14,6 @@ This pipeline answers five critical business questions:
 4. Which warehouses are underperforming?
 5. What is the projected ROI if inventory accuracy improves by 5%?
 
-## What This Project Solves
-This pipeline answers five critical business questions:
-1. How much money are we losing due to shrinkage?
-2. How much revenue are we losing due to stockouts?
-3. Which SKUs are tying up too much capital?
-4. Which warehouses are underperforming?
-5. What is the projected ROI if inventory accuracy improves by 5%?
-
 
 ## 🤖 Pipeline Automation
 This project includes a Python automation layer that runs nightly to:
@@ -91,41 +83,51 @@ distribution) operates:
 
 ## Status
 🔨 In Progress — Database layer complete, KPI queries in development
+
 ## 📊 Key Findings So Far
 
-### 🤖 Planned Automation
-| Feature | Tool | Status |
-|---|---|---|
-| Nightly running inventory calculation | Python + PostgreSQL | 🔨 In Progress |
-| Automatic stockout detection | Python pandas | 🔨 Planned |
-| Low stock alert system | Python + email | 🔨 Planned |
-| Daily Power BI refresh | Python + Power BI API | 🔨 Planned |
-
 ### 💰 Revenue & Profitability
-| Warehouse                      | Revenue  | COGS    | Gross Margin % |
-|--------------------------------|----------|---------|----------------|
-| Atlanta Distribution Center    | $28.7M   | $9.3M   | 67.6%          |
-| Los Angeles Distribution Center| $28.7M   | $9.3M   | 67.5%          |
-| Dallas Distribution Center     | $28.7M   | $9.3M   | 67.6%          |
-| New Jersey Distribution Center | $28.6M   | $9.3M   | 67.6%          |
-| Chicago Distribution Center    | $28.6M   | $9.2M   | 67.6%          |
+| Warehouse | Revenue | COGS | Gross Margin % |
+|---|---|---|---|
+| Atlanta Distribution Center | $28.7M | $9.3M | 67.6% |
+| Los Angeles Distribution Center | $28.7M | $9.3M | 67.5% |
+| Dallas Distribution Center | $28.7M | $9.3M | 67.6% |
+| New Jersey Distribution Center | $28.6M | $9.3M | 67.6% |
+| Chicago Distribution Center | $28.6M | $9.2M | 67.6% |
 
 ### 🔍 Shrinkage Analysis
-| Warehouse                      | Shrinkage % | Dollar Loss |
-|--------------------------------|-------------|-------------|
-| Chicago Distribution Center    | 9.01%       | $8.9M       |
-| Dallas Distribution Center     | 8.97%       | $8.7M       |
-| Atlanta Distribution Center    | 2.53%       | $2.5M       |
-| New Jersey Distribution Center | 2.52%       | $2.5M       |
-| Los Angeles Distribution Center| 2.51%       | $2.5M       |
+| Warehouse | Shrinkage % | Dollar Loss |
+|---|---|---|
+| Chicago Distribution Center | 9.01% | $8.9M |
+| Dallas Distribution Center | 8.97% | $8.7M |
+| Atlanta Distribution Center | 2.53% | $2.5M |
+| New Jersey Distribution Center | 2.52% | $2.5M |
+| Los Angeles Distribution Center | 2.51% | $2.5M |
+
+### 📦 Stockout Revenue Loss
+| Warehouse | Stockout Days | Lost Revenue |
+|---|---|---|
+| Atlanta Distribution Center | 5,902 | $38.3M |
+| Los Angeles Distribution Center | 6,321 | $35.4M |
+| New Jersey Distribution Center | 5,697 | $33.7M |
+| Dallas Distribution Center | 5,531 | $29.9M |
+| Chicago Distribution Center | 5,318 | $26.6M |
 
 ### 🚨 Executive Insights
-| Metric                              | Value   |
-|-------------------------------------|---------|
-| Total Company Revenue               | $143.2M |
-| Total Shrinkage Loss                | $25.1M  |
-| Chicago + Dallas Combined Loss      | $17.6M  |
-| % of Total Shrinkage from 2 Centers | 72%     |
+| Metric | Value |
+|---|---|
+| Total Company Revenue | $143.2M |
+| Total Shrinkage Loss | $25.1M |
+| Chicago + Dallas Shrinkage | $17.6M (72% of total) |
+| Total Stockout Lost Revenue | $163.9M |
+| Atlanta + LA Stockout Loss | $73.7M (45% of total) |
+
+### 💡 Key Finding
+| Warehouse Group | Primary Problem | Recommended Action |
+|---|---|---|
+| Chicago + Dallas | High shrinkage 9%+ | Loss prevention, security |
+| Atlanta + LA | High stockout loss | Better forecasting, faster reorder |
+
 
 ### 📌 KPI Progress
 | KPI | Description | Status |
@@ -135,7 +137,7 @@ distribution) operates:
 | KPI 3 | Gross Margin per Warehouse | ✅ Complete |
 | KPI 4 | Shrinkage % per Warehouse | ✅ Complete |
 | KPI 5 | Shrinkage Financial Loss | ✅ Complete |
-| KPI 6 | Stockout Revenue Loss | 🔨 In Progress |
+| KPI 6 | Stockout Revenue Loss | 🔨 ✅ Complete |
 | KPI 7 | Inventory Turnover Ratio | 🔨 In Progress |
 | KPI 8 | Days Inventory on Hand | 🔨 In Progress |
 | KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
@@ -152,6 +154,12 @@ warehouse. Calculated as:
 
 This captures demand-spike and damage driven stockouts 
 but does not account for:
+
+> **Note:** In a production environment using enterprise 
+> WMS systems such as Manhattan Associates, exact inventory 
+> positions and true stockout events would be tracked in 
+> real time, providing more precise stockout detection 
+> than this proxy formula.
 
 | Limitation | Missing Data | Future Enhancement |
 |---|---|---|
