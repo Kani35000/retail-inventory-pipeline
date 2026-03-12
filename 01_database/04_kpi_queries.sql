@@ -115,3 +115,42 @@ JOIN cycle_product cp ON c.product_id = cp.product_id
 GROUP BY w.warehouse_id, w.warehouse_name
 ORDER BY dollar_shrinkage DESC;
 
+-- ============================================
+-- KPI 6: ESTIMATED LOST REVENUE FROM STOCKOUTS
+-- ============================================
+WITH running_inventory AS (
+    SELECT
+        transaction_date,
+        warehouse_id,
+        product_id,
+        units_sold,
+        units_damaged,
+        units_received,
+        units_returned,
+        SUM(units_received + units_returned 
+            - units_sold - units_damaged)
+        OVER (
+            PARTITION BY warehouse_id, product_id
+            ORDER BY transaction_date
+            ROWS UNBOUNDED PRECEDING
+        ) AS running_inventory
+    FROM retail.inventory_transactions
+),
+stockout_days AS (
+    SELECT
+        transaction_date,
+        warehouse_id,
+        product_id,
+        ABS(running_inventory) AS unmet_demand
+    FROM running_inventory
+    WHERE running_inventory < 0
+)
+SELECT
+    w.warehouse_name,
+    COUNT(*) AS stockout_days,
+    SUM(s.unmet_demand * p.unit_price) AS lost_revenue
+FROM stockout_days s
+JOIN retail.products p ON s.product_id = p.product_id
+JOIN retail.warehouses w ON s.warehouse_id = w.warehouse_id
+GROUP BY w.warehouse_name
+ORDER BY lost_revenue DESC;
