@@ -14,6 +14,30 @@ This pipeline answers five critical business questions:
 4. Which warehouses are underperforming?
 5. What is the projected ROI if inventory accuracy improves by 5%?
 
+## 📊 KPI Story Arc
+This project tells one connected executive story across 9 KPIs:
+
+| KPI | Focus | Business Question |
+|---|---|---|
+| KPI 1-3 | Revenue & Profitability | What is our baseline performance? |
+| KPI 4-5 | Shrinkage Analysis | Where are we losing to theft and damage? |
+| KPI 6 | Stockout Analysis | Where are we losing to unmet demand? |
+| KPI 7 | Inventory Turnover | How efficiently are we cycling inventory seasonally? |
+| KPI 8 | Days Inventory on Hand | How long is inventory sitting idle? |
+| KPI 9 | ROI Scenario Analysis | What happens if we fix the problems? |
+
+### 📌 KPI Progress
+| KPI | Description | Status |
+|-----|-------------|--------|
+| KPI 1 | Total Revenue per Warehouse | ✅ Complete |
+| KPI 2 | Total COGS per Warehouse | ✅ Complete |
+| KPI 3 | Gross Margin per Warehouse | ✅ Complete |
+| KPI 4 | Shrinkage % per Warehouse | ✅ Complete |
+| KPI 5 | Shrinkage Financial Loss | ✅ Complete |
+| KPI 6 | Stockout Revenue Loss | ✅ Complete |
+| KPI 7 | Inventory Turnover Ratio | 🔨 In Progress |
+| KPI 8 | Days Inventory on Hand | 🔨 In Progress |
+| KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
 
 ## 🤖 Pipeline Automation
 This project includes a Python automation layer that runs nightly to:
@@ -129,20 +153,6 @@ distribution) operates:
 | Atlanta + LA | High stockout loss | Better forecasting, faster reorder |
 
 
-### 📌 KPI Progress
-| KPI | Description | Status |
-|-----|-------------|--------|
-| KPI 1 | Total Revenue per Warehouse | ✅ Complete |
-| KPI 2 | Total COGS per Warehouse | ✅ Complete |
-| KPI 3 | Gross Margin per Warehouse | ✅ Complete |
-| KPI 4 | Shrinkage % per Warehouse | ✅ Complete |
-| KPI 5 | Shrinkage Financial Loss | ✅ Complete |
-| KPI 6 | Stockout Revenue Loss | 🔨 ✅ Complete |
-| KPI 7 | Inventory Turnover Ratio | 🔨 In Progress |
-| KPI 8 | Days Inventory on Hand | 🔨 In Progress |
-| KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
-
-
 ## 🔬 Limitations & Further Investigation
 
 ### Current Model Limitations
@@ -168,6 +178,8 @@ but does not account for:
 | Allocation errors | No transfer column | Add warehouse transfer table |
 | Receiving errors | No receiving accuracy column | Add receiving audit table |
 | Minimum order issues | No vendor column | Add vendor agreement table |
+
+
 
 ### Recommended Next Steps
 | Priority | Enhancement | Business Impact |
