@@ -35,7 +35,7 @@ This project tells one connected executive story across 9 KPIs:
 | KPI 4 | Shrinkage % per Warehouse | ✅ Complete |
 | KPI 5 | Shrinkage Financial Loss | ✅ Complete |
 | KPI 6 | Stockout Revenue Loss | ✅ Complete |
-| KPI 7 | Inventory Turnover Ratio | 🔨 In Progress |
+| KPI 7 | Quarterly Inventory Turnover Ratio | ✅ Complete |
 | KPI 8 | Days Inventory on Hand | 🔨 In Progress |
 | KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
 
@@ -137,6 +137,29 @@ distribution) operates:
 | Dallas Distribution Center | 5,531 | $29.9M |
 | Chicago Distribution Center | 5,318 | $26.6M |
 
+### 📈 Quarterly Inventory Turnover Ratio
+| Warehouse | Q2 (Apr-Jun) | Q3 (Jul-Sep) | Q4 (Oct-Dec) |
+|---|---|---|---|
+| Atlanta Distribution Center | 881.83 | 384.90 | 1,345.89 |
+| Los Angeles Distribution Center | 823.89 | 376.54 | 1,307.47 |
+| New Jersey Distribution Center | 844.71 | 370.22 | 1,210.05 |
+| Dallas Distribution Center | 787.63 | 358.21 | 1,177.33 |
+| Chicago Distribution Center | 815.25 | 365.80 | 1,130.30 |
+
+### 💡 Turnover Insights
+| Finding | Implication |
+|---|---|
+| Q4 highest turnover across all warehouses | Holiday demand confirmed |
+| Q3 lowest turnover across all warehouses | Pre-holiday inventory buildup |
+| Atlanta leads turnover efficiency | Demand consistently exceeds supply |
+| Chicago lowest turnover | Inventory sits longer enabling shrinkage |
+
+> **Conclusion:** Turnover ratios confirm seasonal demand patterns 
+> and warehouse efficiency rankings consistent with shrinkage 
+> and stockout findings — Chicago and Dallas underperform 
+> while Atlanta and LA face demand driven inventory pressure.
+
+
 ### 🚨 Executive Insights
 | Metric | Value |
 |---|---|
@@ -179,7 +202,13 @@ but does not account for:
 | Receiving errors | No receiving accuracy column | Add receiving audit table |
 | Minimum order issues | No vendor column | Add vendor agreement table |
 
+### Inventory Turnover Interpretation
+Turnover ratios reflect relative warehouse performance 
+and seasonal patterns rather than absolute benchmarks.
 
+| Context | Realistic Range | Simulation Result |
+|---|---|---|
+| Quarterly turnover | 1x - 4x | 300x - 1,300x |
 
 ### Recommended Next Steps
 | Priority | Enhancement | Business Impact |
