@@ -73,6 +73,18 @@ This project includes a Python automation layer that runs nightly to:
 | Revenue already lost | Reorder triggered immediately |
 | Reactive decision making | Proactive inventory management |
 
+### 🐍 Pipeline Scripts
+| Script | Description | Status |
+|---|---|---|
+| db_connection.py | PostgreSQL connection engine | ✅ Complete |
+| extract_data.py | Extract transactions and cycle counts | ✅ Complete |
+| running_inventory.py | Calculate daily running inventory | 🔨 In Progress |
+| shrinkage_analysis.py | Calculate shrinkage losses | 🔨 Planned |
+| stockout_detection.py | Detect stockout events | 🔨 Planned |
+| kpi_summary.py | Combine all KPI findings | 🔨 Planned |
+
+
+
 ## Project Architecture
 ```
 retail-inventory-pipeline/
