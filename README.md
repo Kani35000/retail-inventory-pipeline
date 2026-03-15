@@ -36,7 +36,7 @@ This project tells one connected executive story across 9 KPIs:
 | KPI 5 | Shrinkage Financial Loss | ✅ Complete |
 | KPI 6 | Stockout Revenue Loss | ✅ Complete |
 | KPI 7 | Quarterly Inventory Turnover Ratio | ✅ Complete |
-| KPI 8 | Days Inventory on Hand | 🔨 In Progress |
+| KPI 8 | Days Inventory on Hand | ✅ Complete |
 | KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
 
 ## 🤖 Pipeline Automation
@@ -159,6 +159,34 @@ distribution) operates:
 > and stockout findings — Chicago and Dallas underperform 
 > while Atlanta and LA face demand driven inventory pressure.
 
+### 📅 Days Inventory on Hand (DIH)
+| Warehouse | Q2 (Apr-Jun) | Q3 (Jul-Sep) | Q4 (Oct-Dec) |
+|---|---|---|---|
+| Atlanta Distribution Center | 0.10 | 0.23 | 0.07 |
+| Los Angeles Distribution Center | 0.11 | 0.24 | 0.07 |
+| New Jersey Distribution Center | 0.11 | 0.24 | 0.07 |
+| Dallas Distribution Center | 0.11 | 0.25 | 0.08 |
+| Chicago Distribution Center | 0.11 | 0.25 | 0.08 |
+
+> **Note:** DIH values reflect simulation constraints.
+> Interpret for relative comparison and seasonal 
+> patterns only. Realistic retail DIH = 15-90 days.
+
+### 💡 DIH Insights
+| Finding | Implication |
+|---|---|
+| Q3 highest DIH across all warehouses | Pre-holiday inventory buildup |
+| Q4 lowest DIH across all warehouses | Holiday demand depleting stock fastest |
+| Atlanta lowest DIH in Q4 | Demand outpacing supply confirmed |
+| Chicago highest DIH consistently | Inventory sitting longer enabling shrinkage |
+
+> **Conclusion:** DIH confirms the inverse relationship 
+> with turnover — warehouses with highest stockout losses 
+> carry the least days of inventory while warehouses 
+> with highest shrinkage carry the most, suggesting 
+> fundamentally different inventory management 
+> challenges requiring targeted solutions.
+
 
 ### 🚨 Executive Insights
 | Metric | Value |
@@ -209,6 +237,12 @@ and seasonal patterns rather than absolute benchmarks.
 | Context | Realistic Range | Simulation Result |
 |---|---|---|
 | Quarterly turnover | 1x - 4x | 300x - 1,300x |
+
+### Days Inventory on hand
+→ Days Inventory on Hand reflects same simulation
+  constraints as turnover ratio. Absolute values
+  should be interpreted for relative comparison
+  and seasonal patterns only.
 
 ### Recommended Next Steps
 | Priority | Enhancement | Business Impact |
