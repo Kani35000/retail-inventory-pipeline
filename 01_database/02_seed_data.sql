@@ -3,7 +3,7 @@
 -- File: 02_seed_data.sql
 -- Description: Seed data for warehouses, 
 -- products, and inventory transactions
--- Author: Your Name
+-- Author: Kani Okorji
 -- Date: March 2026
 -- ============================================
 
