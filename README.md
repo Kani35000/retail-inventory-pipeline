@@ -1,5 +1,19 @@
 # Retail Inventory Optimization & Profitability Protection Pipeline
 
+> **Kani Okorji** | BI Analyst | Retail Inventory Analytics
+> SQL • Python • Power BI | Manhattan Associates | IBM Cognos
+>
+> An end-to-end retail inventory analytics pipeline 
+> quantifying $188.9M in combined shrinkage and stockout 
+> losses across 183,000 transactions. Identifies Chicago 
+> and Dallas as high-shrinkage warehouses and Atlanta and 
+> LA as high-stockout warehouses - enabling targeted loss 
+> prevention and reorder strategies with projected savings 
+> of $1.25M from a 5% shrinkage reduction.
+>
+> 📍 Dallas, TX | 🔗 [LinkedIn](https://www.linkedin.com/in/kani-okorji-20869666/) | 💻 [GitHub](https://github.com/Kani35000)
+
+
 ## Business Problem
 Specialty retail companies lose significant margin every year due to shrinkage, 
 stockouts, and inefficient inventory turnover. Leadership often lacks an integrated 
@@ -37,7 +51,7 @@ This project tells one connected executive story across 9 KPIs:
 | KPI 6 | Stockout Revenue Loss | ✅ Complete |
 | KPI 7 | Quarterly Inventory Turnover Ratio | ✅ Complete |
 | KPI 8 | Days Inventory on Hand | ✅ Complete |
-| KPI 9 | ROI Scenario Analysis | 🔨 In Progress |
+| KPI 9 | ROI Scenario Analysis | ✅ Complete |
 
 ## 🤖 Pipeline Automation
 This project includes a Python automation layer that runs nightly to:
@@ -105,8 +119,14 @@ distribution) operates:
 8. Days of Inventory on Hand
 9. Potential Savings from 5% Shrinkage Reduction
 
-## Status
-🔨 In Progress — Database layer complete, KPI queries in development
+## Project Status
+| Layer | Status |
+|---|---|
+| Database & Seed Data | ✅ Complete |
+| KPI SQL Queries (9/9) | ✅ Complete |
+| Python Pipeline | 🔨 In Progress |
+| Power BI Dashboard | 🔨 Planned |
+| Executive Presentation | 🔨 Planned |
 
 ## 📊 Key Findings So Far
 
@@ -187,6 +207,29 @@ distribution) operates:
 > fundamentally different inventory management 
 > challenges requiring targeted solutions.
 
+### 💰 ROI Scenario Analysis (5% Shrinkage Reduction)
+| Warehouse | Current Loss | Projected Loss | Projected Savings |
+|---|---|---|---|
+| Chicago Distribution Center | $8.9M | $8.5M | $445,451 |
+| Dallas Distribution Center | $8.7M | $8.3M | $437,496 |
+| New Jersey Distribution Center | $2.5M | $2.3M | $123,554 |
+| Los Angeles Distribution Center | $2.5M | $2.3M | $123,453 |
+| Atlanta Distribution Center | $2.5M | $2.3M | $123,328 |
+
+### 🚨 Updated Executive Insights
+| Metric | Value |
+|---|---|
+| Total Company Revenue | $143.2M |
+| Total Shrinkage Loss | $25.1M |
+| Total Stockout Lost Revenue | $163.9M |
+| Combined Revenue at Risk | $188.9M |
+| Projected Savings from 5% Shrinkage Reduction | $1,253,282 |
+| Chicago + Dallas Savings Potential | $882,947 (70% of total) |
+
+> **Conclusion:** A targeted 5% shrinkage reduction 
+> at Chicago and Dallas alone would recover $882,947 
+> annually — representing the highest ROI opportunity 
+> for loss prevention investment across the network.
 
 ### 🚨 Executive Insights
 | Metric | Value |
