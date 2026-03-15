@@ -9,7 +9,7 @@
 
 
 -- ============================================
--- WAREHOUSES
+-- WAREHOUSESgit
 -- ============================================
 UPDATE retail.warehouses SET warehouse_name = 'Dallas Distribution Center',      region = 'Southwest' WHERE warehouse_id = 1;
 UPDATE retail.warehouses SET warehouse_name = 'Atlanta Distribution Center',     region = 'Southeast' WHERE warehouse_id = 2;
