@@ -94,25 +94,16 @@ ORDER BY perc_shrinkage DESC;
 -- ============================================
 -- KPI 5: SHRINKAGE FINANCIAL LOSS PER WAREHOUSE
 -- ============================================
-WITH cycle_product AS (
-    SELECT 
-        c.product_id, 
-        p.unit_cost, 
-        c.warehouse_id
-    FROM retail.cycle_counts c
-    JOIN retail.products p ON c.product_id = p.product_id
-)
 SELECT 
-    w.warehouse_id, 
-    w.warehouse_name, 
-    ROUND(COALESCE((
-        SUM(c.system_inventory * cp.unit_cost) - 
-        SUM(c.physical_count * cp.unit_cost)
-    ), 0), 2) AS dollar_shrinkage
+    w.warehouse_name,
+    ROUND(SUM(
+        (c.system_inventory - c.physical_count) 
+        * p.unit_cost
+    ), 2) AS dollar_shrinkage
 FROM retail.cycle_counts c
-LEFT JOIN retail.warehouses w ON w.warehouse_id = c.warehouse_id
-JOIN cycle_product cp ON c.product_id = cp.product_id
-GROUP BY w.warehouse_id, w.warehouse_name
+JOIN retail.products p ON c.product_id = p.product_id
+JOIN retail.warehouses w ON c.warehouse_id = w.warehouse_id
+GROUP BY w.warehouse_name
 ORDER BY dollar_shrinkage DESC;
 
 -- ============================================
@@ -323,33 +314,25 @@ SELECT
 	;
 
 -- ============================================
--- KPI 9 — ROI Scenario Analysis
+-- KPI 9: ROI SCENARIO ANALYSIS
 -- ============================================
---"What is the projected financial impact if we reduce shrinkage by 5% across all warehouses?"
--- From KPI 5 SHRINKAGE FINANCIAL LOSS PER WAREHOUSE
-WITH cycle_product AS (
+-- "What is the projected financial impact if we 
+--  reduce shrinkage by 5% across all warehouses?"
+
+WITH shrinkage AS (
     SELECT 
-        c.product_id, 
-        p.unit_cost, 
-        c.warehouse_id
+        w.warehouse_name,
+        ROUND(SUM(
+            (c.system_inventory - c.physical_count) 
+            * p.unit_cost
+        ), 2) AS dollar_shrinkage
     FROM retail.cycle_counts c
     JOIN retail.products p ON c.product_id = p.product_id
-),
-shrinkage AS (SELECT 
-    w.warehouse_id, 
-    w.warehouse_name, 
-    ROUND(COALESCE((
-        SUM(c.system_inventory * cp.unit_cost) - 
-        SUM(c.physical_count * cp.unit_cost)
-    ), 0), 2) AS dollar_shrinkage
-FROM retail.cycle_counts c
-LEFT JOIN retail.warehouses w ON w.warehouse_id = c.warehouse_id
-JOIN cycle_product cp ON c.product_id = cp.product_id
-GROUP BY w.warehouse_id, w.warehouse_name
-ORDER BY dollar_shrinkage DESC)
+    JOIN retail.warehouses w ON c.warehouse_id = w.warehouse_id
+    GROUP BY w.warehouse_name
+)
 SELECT 
-    warehouse_id, 
-    warehouse_name, 
+    warehouse_name,
     dollar_shrinkage AS current_shrinkage_loss,
     ROUND((0.95 * dollar_shrinkage), 2) AS projected_shrinkage_loss,
     ROUND((0.05 * dollar_shrinkage), 2) AS projected_savings

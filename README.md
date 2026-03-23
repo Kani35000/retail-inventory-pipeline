@@ -154,11 +154,11 @@ distribution) operates:
 ### 🔍 Shrinkage Analysis
 | Warehouse | Shrinkage % | Dollar Loss |
 |---|---|---|
-| Chicago Distribution Center | 9.01% | $8.9M |
-| Dallas Distribution Center | 8.97% | $8.7M |
-| Atlanta Distribution Center | 2.53% | $2.5M |
-| New Jersey Distribution Center | 2.52% | $2.5M |
-| Los Angeles Distribution Center | 2.51% | $2.5M |
+| Chicago Distribution Center | 9.01% | $137,061 |
+| Dallas Distribution Center | 8.97% | $134,614 |
+| New Jersey Distribution Center | 2.52% | $38,016 |
+| Los Angeles Distribution Center | 2.51% | $37,985 |
+| Atlanta Distribution Center | 2.53% | $37,947 |
 
 ### 📦 Stockout Revenue Loss
 | Warehouse | Stockout Days | Lost Revenue |
@@ -220,13 +220,13 @@ distribution) operates:
 > challenges requiring targeted solutions.
 
 ### 💰 ROI Scenario Analysis (5% Shrinkage Reduction)
-| Warehouse | Current Loss | Projected Loss | Projected Savings |
+| Warehouse | Current Loss | Projected Loss | Savings |
 |---|---|---|---|
-| Chicago Distribution Center | $8.9M | $8.5M | $445,451 |
-| Dallas Distribution Center | $8.7M | $8.3M | $437,496 |
-| New Jersey Distribution Center | $2.5M | $2.3M | $123,554 |
-| Los Angeles Distribution Center | $2.5M | $2.3M | $123,453 |
-| Atlanta Distribution Center | $2.5M | $2.3M | $123,328 |
+| Chicago Distribution Center | $137,061 | $130,208 | $6,853 |
+| Dallas Distribution Center | $134,614 | $127,883 | $6,730 |
+| New Jersey Distribution Center | $38,016 | $36,115 | $1,900 |
+| Los Angeles Distribution Center | $37,985 | $36,086 | $1,899 |
+| Atlanta Distribution Center | $37,947 | $36,049 | $1,897 |
 
 ### 🚨 Updated Executive Insights
 | Metric | Value |
@@ -246,11 +246,9 @@ distribution) operates:
 ### 🚨 Executive Insights
 | Metric | Value |
 |---|---|
-| Total Company Revenue | $143.2M |
-| Total Shrinkage Loss | $25.1M |
-| Chicago + Dallas Shrinkage | $17.6M (72% of total) |
-| Total Stockout Lost Revenue | $163.9M |
-| Atlanta + LA Stockout Loss | $73.7M (45% of total) |
+| Total Shrinkage Loss | $385,625 |
+| Chicago + Dallas Combined | $271,675 (70% of total) |
+| Total Projected Savings 5% | $19,281 |
 
 ### 💡 Key Finding
 | Warehouse Group | Primary Problem | Recommended Action |
