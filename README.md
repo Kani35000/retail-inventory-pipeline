@@ -4,12 +4,12 @@
 > SQL • Python • Power BI | Manhattan Associates | IBM Cognos
 >
 > An end-to-end retail inventory analytics pipeline 
-> quantifying $188.9M in combined shrinkage and stockout 
-> losses across 183,000 transactions. Identifies Chicago 
-> and Dallas as high-shrinkage warehouses and Atlanta and 
-> LA as high-stockout warehouses - enabling targeted loss 
-> prevention and reorder strategies with projected savings 
-> of $1.25M from a 5% shrinkage reduction.
+> quantifying $163.9M in stockout losses and $385,625 
+> in shrinkage losses across 183,000 transactions. 
+> Identifies Chicago and Dallas as high-shrinkage 
+> warehouses and Atlanta and LA as demand-driven 
+> stockout warehouses — enabling targeted inventory 
+> optimization strategies across 5 distribution centers.
 >
 > 📍 Dallas, TX | 🔗 [LinkedIn](https://www.linkedin.com/in/kani-okorji-20869666/) | 💻 [GitHub](https://github.com/Kani35000)
 
@@ -288,6 +288,7 @@ SQL approach uses cumulative inventory deficit.
 Python approach uses daily net flow deficit.
 True lost revenue requires customer demand data
 not available in current simulation.
+This update was made after cross validation during pipeline development
 
 
 ### Inventory Turnover Interpretation
