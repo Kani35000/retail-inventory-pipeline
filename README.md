@@ -56,15 +56,6 @@ This project tells one connected executive story across 9 KPIs:
 ## 🤖 Pipeline Automation
 This project includes a Python automation layer that runs nightly to:
 
-| Automation Feature | Tool | Status |
-|---|---|---|
-| Extract data from PostgreSQL | Python + SQLAlchemy | 🔨 In Progress |
-| Calculate running inventory per SKU | Python + Pandas | 🔨 In Progress |
-| Detect stockout events automatically | Python + Pandas | 🔨 Planned |
-| Flag low stock alerts by warehouse | Python + Pandas | 🔨 Planned |
-| Refresh Power BI dashboard data | Python + Power BI API | 🔨 Planned |
-| Generate nightly stockout report | Python + Email | 🔨 Planned |
-
 ### Why Automation Matters
 | Without Automation | With Automation |
 |---|---|
@@ -78,9 +69,9 @@ This project includes a Python automation layer that runs nightly to:
 |---|---|---|
 | db_connection.py | PostgreSQL connection engine | ✅ Complete |
 | extract_data.py | Extract transactions and cycle counts | ✅ Complete |
-| running_inventory.py | Calculate daily running inventory | 🔨 In Progress |
-| shrinkage_analysis.py | Calculate shrinkage losses | 🔨 Planned |
-| stockout_detection.py | Detect stockout events | 🔨 Planned |
+| running_inventory.py | Calculate daily running inventory | ✅ Complete |
+| shrinkage_analysis.py | Calculate shrinkage losses | ✅ Complete |
+| stockout_detection.py | Detect stockout events | ✅ Complete |
 | kpi_summary.py | Combine all KPI findings | 🔨 Planned |
 
 
@@ -282,6 +273,22 @@ but does not account for:
 | Allocation errors | No transfer column | Add warehouse transfer table |
 | Receiving errors | No receiving accuracy column | Add receiving audit table |
 | Minimum order issues | No vendor column | Add vendor agreement table |
+
+
+### Stockout Lost Revenue Calculation
+Two approaches implemented with different results:
+
+| Approach | Method | Result |
+|---|---|---|
+| SQL (KPI 6) | ABS(running_inventory) × unit_price | $163.9M |
+| Python pipeline | ABS(net_units) × unit_price | $10.1M |
+
+Both are approximations of true lost revenue.
+SQL approach uses cumulative inventory deficit.
+Python approach uses daily net flow deficit.
+True lost revenue requires customer demand data
+not available in current simulation.
+
 
 ### Inventory Turnover Interpretation
 Turnover ratios reflect relative warehouse performance 
