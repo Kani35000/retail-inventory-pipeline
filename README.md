@@ -72,9 +72,16 @@ This project includes a Python automation layer that runs nightly to:
 | running_inventory.py | Calculate daily running inventory | ✅ Complete |
 | shrinkage_analysis.py | Calculate shrinkage losses | ✅ Complete |
 | stockout_detection.py | Detect stockout events | ✅ Complete |
-| kpi_summary.py | Combine all KPI findings | 🔨 Planned |
+| kpi_summary.py | Combine all KPI findings | ✅ Complete |
 
-
+## Pipeline Complete
+```
+✅ db_connection.py    → PostgreSQL bridge
+✅ extract_data.py     → 183,000 rows extracted
+✅ running_inventory.py → cumulative stock calculation
+✅ shrinkage_analysis.py → $385,625 loss identified
+✅ stockout_detection.py → 28,769 stockout events
+✅ kpi_summary.py      → executive combined view
 
 ## Project Architecture
 ```
@@ -127,8 +134,8 @@ distribution) operates:
 |---|---|
 | Database & Seed Data | ✅ Complete |
 | KPI SQL Queries (9/9) | ✅ Complete |
-| Python Pipeline | 🔨 In Progress |
-| Power BI Dashboard | 🔨 Planned |
+| Python Pipeline (6/6)| ✅ Complete |
+| Power BI Dashboard | 🔨 In Progress |
 | Executive Presentation | 🔨 Planned |
 
 ## 📊 Key Findings So Far
