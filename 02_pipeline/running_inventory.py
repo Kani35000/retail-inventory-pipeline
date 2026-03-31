@@ -6,6 +6,8 @@
 import pandas as pd
 from extract_data import extract_transactions
 
+
+
 def calculate_running_inventory(df):
     """
     Calculate daily running inventory per 
@@ -46,6 +48,7 @@ def calculate_running_inventory(df):
     
     return df
 
+
 def flag_stockouts(df):
     """
     Flag rows where running inventory
@@ -83,3 +86,7 @@ if __name__ == "__main__":
         ['transaction_date', 'warehouse_name',
          'product_name', 'running_inventory']
     ].head(10))
+
+
+
+

@@ -21,6 +21,20 @@ shrinkage_summary = df.groupby('warehouse_name').agg(
     total_dollar_loss      = ('dollar_loss', 'sum')
 ).reset_index()
 
+
+def get_shrinkage_summary(df):
+    df['dollar_loss'] = (
+        (df['system_inventory'] - df['physical_count']) 
+        * df['unit_cost']
+    )
+    #  Shrinkage % per warehouse
+    shrinkage_summary = df.groupby('warehouse_name').agg(
+        total_system_inventory = ('system_inventory', 'sum'),
+        total_physical_count   = ('physical_count', 'sum'),
+        total_dollar_loss      = ('dollar_loss', 'sum')
+    ).reset_index()
+    return shrinkage_summary
+
 def calculate_shrinkage(shrinkage_summary):
     shrinkage_summary['perc_shrinkage_loss'] = round((
         (shrinkage_summary['total_system_inventory'] - 
@@ -30,6 +44,7 @@ def calculate_shrinkage(shrinkage_summary):
     return shrinkage_summary
 
 shrinkage_summary = calculate_shrinkage(shrinkage_summary)
+
 
 def get_high_shrinkage_warehouses(shrinkage_summary, 
                                    high_shrinkage=5.0):

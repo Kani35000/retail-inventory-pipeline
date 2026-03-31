@@ -53,6 +53,7 @@ This project tells one connected executive story across 9 KPIs:
 | KPI 8 | Days Inventory on Hand | ✅ Complete |
 | KPI 9 | ROI Scenario Analysis | ✅ Complete |
 
+
 ## 🤖 Pipeline Automation
 This project includes a Python automation layer that runs nightly to:
 
@@ -73,6 +74,7 @@ This project includes a Python automation layer that runs nightly to:
 | shrinkage_analysis.py | Calculate shrinkage losses | ✅ Complete |
 | stockout_detection.py | Detect stockout events | ✅ Complete |
 | kpi_summary.py | Combine all KPI findings | ✅ Complete |
+| scheduler.py | Nightly automated pipeline | 🔨 In Progress |
 
 ## Pipeline Complete
 ```
@@ -135,6 +137,7 @@ distribution) operates:
 | Database & Seed Data | ✅ Complete |
 | KPI SQL Queries (9/9) | ✅ Complete |
 | Python Pipeline (6/6)| ✅ Complete |
+| Pipeline Automation | 🔨 In Progress |
 | Power BI Dashboard | 🔨 In Progress |
 | Executive Presentation | 🔨 Planned |
 

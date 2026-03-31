@@ -11,7 +11,7 @@ df = calculate_running_inventory(df)
 # Flag stockouts
 stockouts = flag_stockouts(df)
 
-def detect_stockout(stockouts, df):
+def detect_stockout(stockouts):
     if len(stockouts) > 0:
         # Daily unmet demand = ABS(net_units) 
         # when running_inventory < 0
@@ -25,10 +25,10 @@ def detect_stockout(stockouts, df):
                 lost_revenue  = ('lost_revenue', 'sum')
         ).reset_index()
         
-        return stockouts_summary.sort_values(
-            'lost_revenue', ascending=False)
+        return stockouts_summary
 
 
-
+print(detect_stockout(stockouts).sort_values(
+            'lost_revenue', ascending=False))
 
 
