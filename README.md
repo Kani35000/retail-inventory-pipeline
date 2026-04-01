@@ -138,8 +138,9 @@ distribution) operates:
 | KPI SQL Queries (9/9) | ✅ Complete |
 | Python Pipeline (6/6)| ✅ Complete |
 | Pipeline Automation | 🔨 In Progress |
-| Power BI Dashboard | 🔨 In Progress |
+| Power BI Dashboard (1/5 pages)  | 🔨 In Progress |
 | Executive Presentation | 🔨 Planned |
+
 
 ## 📊 Key Findings So Far
 
