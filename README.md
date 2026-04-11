@@ -137,9 +137,10 @@ distribution) operates:
 | Database & Seed Data | ✅ Complete |
 | KPI SQL Queries (9/9) | ✅ Complete |
 | Python Pipeline (6/6)| ✅ Complete |
-| Pipeline Automation | 🔨 In Progress |
 | Power BI Dashboard (5/5 pages)  | ✅ Complete |
+| Pipeline Automation | 🔨 In Progress |
 | Executive Presentation | 🔨 Planned |
+| Research Publication | 🔨 In Progress |
 
 ##  Dashboard progress
 ✅ Page 1 → Executive Summary
@@ -164,6 +165,18 @@ distribution) operates:
 
 ### Page 5 — ROI Scenario
 -[ROI Scenario](03_powerbi/screenshots/page5_roi_scenario.png)
+
+
+## 📝 Research Publication
+This project forms the basis of a research paper:
+
+"Quantifying Retail Inventory Loss: A Combined 
+Shrinkage and Stockout Analytics Framework 
+for Distribution Centers"
+
+→ Status: In Progress
+→ Target: SSRN submission May 2026
+
 
 ## 📊 Key Findings So Far
 
