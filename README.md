@@ -94,6 +94,85 @@ retail-inventory-pipeline/
 └── 04_presentation/    # Executive PowerPoint summary
 ```
 
+## ▶️ How to Run
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Kani35000/retail-inventory-pipeline.git
+cd retail-inventory-pipeline
+```
+
+### 2. Set Up PostgreSQL Database
+```bash
+# Create database in pgAdmin
+# Database name: retail_analytics
+
+# Run schema and seed files in order:
+psql -U postgres -d retail_analytics -f 01_database/02_seed_data.sql
+psql -U postgres -d retail_analytics -f 01_database/03_cycle_counts_seed.sql
+```
+
+### 3. Install Python Dependencies
+```bash
+pip install pandas sqlalchemy psycopg2-binary schedule
+```
+
+### 4. Configure Database Connection
+```bash
+# Open 02_pipeline/db_connection.py
+# Update these values:
+DB_HOST     = "localhost"
+DB_PORT     = "5432"
+DB_NAME     = "retail_analytics"
+DB_USER     = "postgres"
+DB_PASSWORD = "your_password"
+```
+
+### 5. Run Python Pipeline
+```bash
+cd 02_pipeline
+
+# Test database connection
+python db_connection.py
+
+# Extract data
+python extract_data.py
+
+# Calculate running inventory
+python running_inventory.py
+
+# Analyze shrinkage
+python shrinkage_analysis.py
+
+# Detect stockouts
+python stockout_detection.py
+
+# Generate KPI summary
+python kpi_summary.py
+```
+
+### 6. Run Automated Pipeline
+```bash
+# Runs nightly at midnight automatically
+python scheduler.py
+```
+
+### 7. Open Power BI Dashboard
+```bash
+# Open 03_powerbi/retail_inventory_dashboard.pbix
+# In Power BI Desktop
+# Refresh data connection if needed
+```
+
+### 8. Run SQL KPI Queries
+```bash
+# Open pgAdmin
+# Connect to retail_analytics database
+# Run queries from:
+# 01_database/04_kpi_queries.sql
+```
+
+
 ## Tech Stack
 | Layer | Tool |
 |---|---|
@@ -281,12 +360,6 @@ for Distribution Centers"
 > annually — representing the highest ROI opportunity 
 > for loss prevention investment across the network.
 
-### 🚨 Executive Insights
-| Metric | Value |
-|---|---|
-| Total Shrinkage Loss | $385,625 |
-| Chicago + Dallas Combined | $271,675 (70% of total) |
-| Total Projected Savings 5% | $19,281 |
 
 ### 💡 Key Finding
 | Warehouse Group | Primary Problem | Recommended Action |
@@ -347,10 +420,12 @@ and seasonal patterns rather than absolute benchmarks.
 | Quarterly turnover | 1x - 4x | 300x - 1,300x |
 
 ### Days Inventory on hand
-→ Days Inventory on Hand reflects same simulation
-  constraints as turnover ratio. Absolute values
-  should be interpreted for relative comparison
-  and seasonal patterns only.
+→ Days Inventory on Hand (DIH) values are derived from a synthetic dataset 
+designed to simulate real-world retail inventory dynamics. 
+
+While absolute values are not directly comparable to industry benchmarks, 
+the metric accurately captures relative performance differences and 
+seasonal inventory patterns across warehouses.
 
 ### Recommended Next Steps
 | Priority | Enhancement | Business Impact |
@@ -370,7 +445,7 @@ and seasonal patterns rather than absolute benchmarks.
 | Real time streaming | Kafka | Live inventory updates |
 
 ## Author
-**kani okorji**  
+**kani Okorji**  
 Masters in Project Management (Analytics Concentration) | MBA  
 Linkedin Profile URL: (https://www.linkedin.com/in/kani-okorji-20869666/) 
 GitHub Profile URL: (https://github.com/Kani35000)
