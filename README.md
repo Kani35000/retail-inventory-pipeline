@@ -148,6 +148,23 @@ distribution) operates:
 ✅ Page 4 → Inventory Efficiency
 ✅ Page 5 → ROI Scenario
 
+## 📊 Dashboard Screenshots
+
+### Page 1 — Executive Summary
+-[Executive Summary](03_powerbi/screenshots/page1_executive_summary.png)
+
+### Page 2 — Shrinkage Analysis
+-[Shrinkage Analysis](03_powerbi/screenshots/page2_shrinkage_analysis.png)
+
+### Page 3 — Stockout Analysis
+-[Stockout Analysis](03_powerbi/screenshots/page3_stockout_analysis.png)
+
+### Page 4 — Inventory Efficiency
+-[Inventory Efficiency](03_powerbi/screenshots/page4_inventory_efficiency.png)
+
+### Page 5 — ROI Scenario
+-[ROI Scenario](03_powerbi/screenshots/page5_roi_scenario.png)
+
 ## 📊 Key Findings So Far
 
 ### 💰 Revenue & Profitability
