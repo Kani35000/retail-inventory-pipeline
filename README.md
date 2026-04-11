@@ -138,7 +138,7 @@ distribution) operates:
 | KPI SQL Queries (9/9) | ✅ Complete |
 | Python Pipeline (6/6)| ✅ Complete |
 | Pipeline Automation | 🔨 In Progress |
-| Power BI Dashboard (4/5 pages)  | 🔨 In Progress |
+| Power BI Dashboard (5/5 pages)  | 🔨 Complete |
 | Executive Presentation | 🔨 Planned |
 
 ##  Dashboard progress
@@ -146,7 +146,7 @@ distribution) operates:
 ✅ Page 2 → Shrinkage Analysis
 ✅ Page 3 → Stockout Analysis
 ✅ Page 4 → Inventory Efficiency
-🔨 Page 5 → ROI Scenario
+✅ Page 5 → ROI Scenario
 
 ## 📊 Key Findings So Far
 
