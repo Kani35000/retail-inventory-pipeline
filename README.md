@@ -76,8 +76,8 @@ This project includes a Python automation layer that runs nightly to:
 | kpi_summary.py | Combine all KPI findings | ✅ Complete |
 | scheduler.py | Nightly automated pipeline | 🔨 In Progress |
 
-## Pipeline Complete
-```
+### Pipeline Complete
+
 ✅ db_connection.py    → PostgreSQL bridge
 ✅ extract_data.py     → 183,000 rows extracted
 ✅ running_inventory.py → cumulative stock calculation
@@ -270,7 +270,7 @@ for Distribution Centers"
 | Metric | Value |
 |---|---|
 | Total Company Revenue | $143.2M |
-| Total Shrinkage Loss | $25.1M |
+| Total Shrinkage Loss | $385,625 |
 | Total Stockout Lost Revenue | $163.9M |
 | Combined Revenue at Risk | $188.9M |
 | Projected Savings from 5% Shrinkage Reduction | $1,253,282 |
