@@ -74,7 +74,7 @@ This project includes a Python automation layer that runs nightly to:
 | shrinkage_analysis.py | Calculate shrinkage losses | ✅ Complete |
 | stockout_detection.py | Detect stockout events | ✅ Complete |
 | kpi_summary.py | Combine all KPI findings | ✅ Complete |
-| scheduler.py | Nightly automated pipeline | 🔨 In Progress |
+| scheduler.py | Nightly automated pipeline | ✅ Complete |
 
 ### Pipeline Complete
 
@@ -217,7 +217,7 @@ distribution) operates:
 | KPI SQL Queries (9/9) | ✅ Complete |
 | Python Pipeline (6/6)| ✅ Complete |
 | Power BI Dashboard (5/5 pages)  | ✅ Complete |
-| Pipeline Automation | 🔨 In Progress |
+| Pipeline Automation | ✅ Complete |
 | Executive Presentation | 🔨 Planned |
 | Research Publication | 🔨 In Progress |
 
@@ -305,7 +305,7 @@ for Distribution Centers"
 
 > **Conclusion:** Turnover ratios confirm seasonal demand patterns 
 > and warehouse efficiency rankings consistent with shrinkage 
-> and stockout findings — Chicago and Dallas underperform 
+> and stockout findings: Chicago and Dallas underperform 
 > while Atlanta and LA face demand driven inventory pressure.
 
 ### 📅 Days Inventory on Hand (DIH)
