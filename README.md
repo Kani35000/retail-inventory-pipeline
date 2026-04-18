@@ -210,14 +210,15 @@ distribution) operates:
 8. Days of Inventory on Hand
 9. Potential Savings from 5% Shrinkage Reduction
 
-## Project Status
+## 📌 Project Status
 | Layer | Status |
 |---|---|
 | Database & Seed Data | ✅ Complete |
 | KPI SQL Queries (9/9) | ✅ Complete |
-| Python Pipeline (6/6)| ✅ Complete |
-| Power BI Dashboard (5/5 pages)  | ✅ Complete |
+| Python Pipeline (6/6) | ✅ Complete |
 | Pipeline Automation | ✅ Complete |
+| Power BI Dashboard (5/5) | ✅ Complete |
+| REST API Layer | 🔨 In Progress |
 | Executive Presentation | 🔨 Planned |
 | Research Publication | 🔨 In Progress |
 
