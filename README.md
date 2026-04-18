@@ -6,7 +6,7 @@
 > An end-to-end retail inventory analytics 
 > pipeline quantifying $163.9M in stockout 
 > losses and $385,625 in shrinkage losses 
-> across 183,000 transactions — identifying 
+> across 183,000 transactions: identifying 
 > Chicago and Dallas as high-shrinkage 
 > warehouses and Atlanta and LA as 
 > demand-driven stockout warehouses.
@@ -182,6 +182,7 @@ python scheduler.py
 |---|---|
 | Database | PostgreSQL (pgAdmin) |
 | Pipeline Automation | Python (pandas, psycopg2, sqlalchemy) |
+| REST API | FastAPI + Uvicorn |
 | Dashboard | Power BI |
 | Presentation | PowerPoint |
 | Version Control | Git + GitHub |
