@@ -1,15 +1,18 @@
 # Retail Inventory Optimization & Profitability Protection Pipeline
 
-> **Kani Okorji** | BI Analyst | Retail Inventory Analytics
-> SQL • Python • Power BI | Manhattan Associates | IBM Cognos
+> **Kani Okorji** | Data Analyst | Supply Chain & Inventory Analytics
+> SQL • Python • Power BI • REST API | Manhattan Associates | IBM Cognos
 >
-> An end-to-end retail inventory analytics pipeline 
-> quantifying $163.9M in stockout losses and $385,625 
-> in shrinkage losses across 183,000 transactions. 
-> Identifies Chicago and Dallas as high-shrinkage 
-> warehouses and Atlanta and LA as demand-driven 
-> stockout warehouses — enabling targeted inventory 
-> optimization strategies across 5 distribution centers.
+> An end-to-end retail inventory automation system built on four layers:
+>
+> 1. **Pipeline** — Extracts and processes 183,000 daily transactions
+> 2. **Automation** — Nightly scheduler runs automatically at midnight
+> 3. **REST API** — Exposes KPI results as endpoints consumable by any automation tool
+> 4. **Dashboard** — Power BI executive dashboard visualizing $163.9M in stockout losses and $385,625 in shrinkage across 5 distribution centers
+>
+> Identifies Chicago and Dallas as high-shrinkage warehouses and Atlanta and LA
+> as demand-driven stockout warehouses — enabling targeted loss prevention
+> and reorder strategies with projected savings of $19,281 annually.
 >
 > 📍 Dallas, TX | 🔗 [LinkedIn](https://www.linkedin.com/in/kani-okorji-20869666/) | 💻 [GitHub](https://github.com/Kani35000)
 
