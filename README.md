@@ -223,7 +223,7 @@ distribution) operates:
 | Python Pipeline (6/6) | ✅ Complete |
 | Pipeline Automation | ✅ Complete |
 | Power BI Dashboard (5/5) | ✅ Complete |
-| REST API Layer | 🔨 In Progress |
+| REST API Layer | ✅ Complete |
 | Executive Presentation | 🔨 Planned |
 | Research Publication | 🔨 In Progress |
 
@@ -237,19 +237,39 @@ distribution) operates:
 ## 📊 Dashboard Screenshots
 
 ### Page 1 — Executive Summary
--[Executive Summary](03_powerbi/screenshots/page1_executive_summary.png)
+![Executive Summary](03_powerbi/screenshots/page1_executive_summary.png)
 
 ### Page 2 — Shrinkage Analysis
--[Shrinkage Analysis](03_powerbi/screenshots/page2_shrinkage_analysis.png)
+![Shrinkage Analysis](03_powerbi/screenshots/page2_shrinkage_analysis.png)
 
 ### Page 3 — Stockout Analysis
--[Stockout Analysis](03_powerbi/screenshots/page3_stockout_analysis.png)
+![Stockout Analysis](03_powerbi/screenshots/page3_stockout_analysis.png)
 
 ### Page 4 — Inventory Efficiency
--[Inventory Efficiency](03_powerbi/screenshots/page4_inventory_efficiency.png)
+![Inventory Efficiency](03_powerbi/screenshots/page4_inventory_efficiency.png)
 
 ### Page 5 — ROI Scenario
--[ROI Scenario](03_powerbi/screenshots/page5_roi_scenario.png)
+![ROI Scenario](03_powerbi/screenshots/page5_roi_scenario.png)
+
+
+## 🔌 REST API Layer
+The pipeline exposes KPI data through a REST API
+built with FastAPI allowing any automation tool
+to consume inventory analytics data.
+
+### API Endpoints
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | / | API root and available endpoints |
+| GET | /api/kpi/shrinkage | Shrinkage % and dollar loss by warehouse |
+| GET | /api/kpi/stockouts | Stockout days and lost revenue by warehouse |
+| GET | /api/kpi/summary | Full executive KPI summary |
+
+### API Documentation
+![REST API Documentation](02_pipeline/api_screenshots/api.png)
+
+> **Live Documentation:** Available at `http://localhost:8000/docs`
+> Built with FastAPI — auto-generated interactive documentation
 
 
 ## 📝 Research Publication
