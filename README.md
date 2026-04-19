@@ -267,6 +267,10 @@ to consume inventory analytics data.
 
 ### API Documentation
 ![REST API Documentation](02_pipeline/api_screenshots/api.png)
+![api_response_root](02_pipeline/api_screenshots/api_response_root.png)
+![api_response_shrinkage](02_pipeline/api_screenshots/api_response_shrinkage.png)
+![api_response_stockout](02_pipeline/api_screenshots/api_response_stockout.png)
+![api_reponse_kpi_summary](02_pipeline/api_screenshots/api_reponse_kpi_summary.png)
 
 > **Live Documentation:** Available at `http://localhost:8000/docs`
 > Built with FastAPI — auto-generated interactive documentation
