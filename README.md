@@ -224,8 +224,8 @@ distribution) operates:
 | Pipeline Automation | ✅ Complete |
 | Power BI Dashboard (5/5) | ✅ Complete |
 | REST API Layer | ✅ Complete |
+| Research Publication | ✅ Preprint Published (SSRN) |
 | Executive Presentation | 🔨 Planned |
-| Research Publication | 🔨 In Progress |
 
 ##  Dashboard progress
 ✅ Page 1 → Executive Summary
