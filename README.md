@@ -224,7 +224,7 @@ distribution) operates:
 | Pipeline Automation | ✅ Complete |
 | Power BI Dashboard (5/5) | ✅ Complete |
 | REST API Layer | ✅ Complete |
-| Research Publication | ✅ Preprint Published (SSRN) |
+| Research Publication | ✅ Published (SSRN) |
 | Executive Presentation | 🔨 Planned |
 
 ##  Dashboard progress
@@ -277,14 +277,12 @@ to consume inventory analytics data.
 
 
 ## 📝 Research Publication
-This project forms the basis of a research paper:
-
 "Quantifying Retail Inventory Loss: A Combined 
 Shrinkage and Stockout Analytics Framework 
 for Distribution Centers"
 
-→ Status: In Progress
-→ Target: SSRN submission May 2026
+Published: SSRN Electronic Journal | April 2026
+🔗 [Read the Paper](https://ssrn.com/author=11236048)
 
 
 ## 📊 Key Findings So Far
