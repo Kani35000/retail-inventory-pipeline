@@ -69,6 +69,15 @@ This project includes a Python automation layer that runs nightly to:
 | Revenue already lost | Reorder triggered immediately |
 | Reactive decision making | Proactive inventory management |
 
+| Automation Feature | Tool | Status |
+|---|---|---|
+| Extract data from PostgreSQL | Python + SQLAlchemy | ✅ Complete |
+| Calculate running inventory per SKU | Python + Pandas | ✅ Complete |
+| Detect stockout events automatically | Python + Pandas | ✅ Complete |
+| Flag high shrinkage warehouses | Python + Pandas | ✅ Complete |
+| Save results to database nightly | Python + SQLAlchemy | ✅ Complete |
+| Generate nightly stockout alerts | Python + schedule | ✅ Complete |
+
 ### 🐍 Pipeline Scripts
 | Script | Description | Status |
 |---|---|---|
@@ -227,7 +236,7 @@ distribution) operates:
 | Research Publication | ✅ Published — [SSRN](https://ssrn.com/author=11236048) |
 | Executive Presentation | 🔨 Planned |
 
-##  Dashboard progress
+## 📊 Dashboard Progress
 ✅ Page 1 → Executive Summary
 ✅ Page 2 → Shrinkage Analysis
 ✅ Page 3 → Stockout Analysis
@@ -267,10 +276,7 @@ to consume inventory analytics data.
 
 ### API Documentation
 ![REST API Documentation](02_pipeline/api_screenshots/api.png)
-![api_response_root](02_pipeline/api_screenshots/api_response_root.png)
-![api_response_shrinkage](02_pipeline/api_screenshots/api_response_shrinkage.png)
-![api_response_stockout](02_pipeline/api_screenshots/api_response_stockout.png)
-![api_reponse_kpi_summary](02_pipeline/api_screenshots/api_reponse_kpi_summary.png)
+![KPI Summary Response](02_pipeline/api_screenshots/api_reponse_kpi_summary.png)
 
 > **Live Documentation:** Available at `http://localhost:8000/docs`
 > Built with FastAPI — auto-generated interactive documentation
@@ -373,20 +379,15 @@ Published: SSRN Electronic Journal | April 2026
 | Los Angeles Distribution Center | $37,985 | $36,086 | $1,899 |
 | Atlanta Distribution Center | $37,947 | $36,049 | $1,897 |
 
-### 🚨 Updated Executive Insights
+### 🚨 Executive Insights
 | Metric | Value |
 |---|---|
-| Total Company Revenue | $143.2M |
+| Total Company Revenue | $143.25M |
 | Total Shrinkage Loss | $385,625 |
 | Total Stockout Lost Revenue | $163.9M |
-| Combined Revenue at Risk | $188.9M |
-| Projected Savings from 5% Shrinkage Reduction | $1,253,282 |
-| Chicago + Dallas Savings Potential | $882,947 (70% of total) |
-
-> **Conclusion:** A targeted 5% shrinkage reduction 
-> at Chicago and Dallas alone would recover $882,947 
-> annually — representing the highest ROI opportunity 
-> for loss prevention investment across the network.
+| Combined Revenue at Risk | $164.3M |
+| Projected Savings from 5% Shrinkage Reduction | $19,281 |
+| Chicago + Dallas Savings Potential | $13,583 |
 
 
 ### 💡 Key Finding
@@ -472,8 +473,20 @@ seasonal inventory patterns across warehouses.
 | Workflow orchestration | Apache Airflow | Pipeline scheduling |
 | Real time streaming | Kafka | Live inventory updates |
 
+## 🔮 Phase 2 — Predictive Analytics
+This project is extended in:
+[Predictive Inventory Management Pipeline](https://github.com/Kani35000/predictive-inventory-pipeline)
+
+Phase 1 → Quantified the losses ✅
+Phase 2 → Prevents the losses 🔨 In Progress
+
 ## Author
-**kani Okorji**  
-Masters in Project Management (Analytics Concentration) | MBA  
-Linkedin Profile URL: (https://www.linkedin.com/in/kani-okorji-20869666/) 
-GitHub Profile URL: (https://github.com/Kani35000)
+**Kani Okorji**  
+Data Analyst | Supply Chain & Inventory Analytics
+🎓 MS Project Management (Data Analytics) | MBA
+🏢 Inventory Specialist — Bath & Body Works
+📍 Dallas, TX
+📧 kanidayeokorji@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/kani-okorji-20869666/)
+💻 [GitHub](https://github.com/Kani35000)
+📄 [Research Paper](https://ssrn.com/author=11236048)
